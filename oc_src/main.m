@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSThread_Test.h"
+int main(int argc, const char * argv[])
+{
 
-int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
-    }
-    return 0;
+    NSThread_Test *test1=[[NSThread_Test alloc] init];
+    [test1 main3];
 }
