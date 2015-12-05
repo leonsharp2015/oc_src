@@ -18,6 +18,6 @@ int main(int argc, const char * argv[])
     
    
     Regex_Test *reg=[[Regex_Test alloc]init];
-    [reg test];
+    [reg test_regex];
     
 }
