@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSThread_Test.h"
+#import "ArraySort.h"
+
 int main(int argc, const char * argv[])
 {
 
-    NSThread_Test *test1=[[NSThread_Test alloc] init];
-    [test1 main3];
+    ArraySort *sort=[[ArraySort alloc] init ];
+    [sort test];
+    
+   
+   
+    
 }

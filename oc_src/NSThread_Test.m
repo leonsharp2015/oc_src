@@ -8,54 +8,74 @@
 
 #import "NSThread_Test.h"
 
-@implementation NSThread_Test
+@implementation NSThread_Test //???
 
 -(void) main3
 {
+    
     tickets = 100;
     count = 0;
+    theLock = [[NSLock alloc] init];
     // 锁对象
     ticketsCondition = [[NSCondition alloc] init];
-    ticketsThreadone = [[NSThread alloc] initWithTarget:self selector:@selector(run3) object:nil];
+    ticketsThreadone = [[NSThread alloc] initWithTarget:self selector:@selector(run1) object:nil];
     [ticketsThreadone setName:@"Thread-1"];
     [ticketsThreadone start];
     
-    
-    ticketsThreadtwo = [[NSThread alloc] initWithTarget:self selector:@selector(run3) object:nil];
+    ticketsThreadtwo = [[NSThread alloc] initWithTarget:self selector:@selector(run1) object:nil];
     [ticketsThreadtwo setName:@"Thread-2"];
     [ticketsThreadtwo start];
+    
+    NSThread *ticketsThreadthree = [[NSThread alloc] initWithTarget:self selector:@selector(run3) object:nil];
+    [ticketsThreadthree setName:@"Thread-3"];
+    [ticketsThreadthree start];
 }
-- (void)run3
+
+- (void)run1
 {
-    NSLog(@"-----------");
+    NSLog(@"=======");
+    sleep(1000);
     while (TRUE)
     {
         // 上锁
         [ticketsCondition lock];
-        if(tickets > 0)
-        {
-            [NSThread sleepForTimeInterval:0.5];
+        [ticketsCondition wait];
+        [theLock lock];
+        if(tickets >= 0){
+            [NSThread sleepForTimeInterval:0.09];
             count = 100 - tickets;
-            NSLog(@"当前票数是:%d,售出:%d,线程名:%@",tickets,count,
-                  [[NSThread currentThread] name]);
+            NSLog(@"当前票数是:%d,售出:%d,线程名:%@",tickets,count,[[NSThread currentThread] name]);
             tickets--;
-        }
-        else
+        }else
         {
             break;
         }
+        [theLock unlock];
         [ticketsCondition unlock];
     }
 }
 
+-(void)run3
+{
+    while (YES)
+    {
+        [ticketsCondition lock];
+        [NSThread sleepForTimeInterval:3];
+        [ticketsCondition signal];
+        [ticketsCondition unlock];
+    }
+}
+
+
+
 - (void)dealloc
 {
-    /*
+    
     [ticketsThreadone release];
     [ticketsThreadtwo release];
     [ticketsCondition release];
     [super dealloc];
-     */
+     
 }
 
 

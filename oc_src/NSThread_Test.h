@@ -8,13 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSThread_Test : NSObject
+@interface NSThread_Test : NSObject //???
 {
     int tickets;
     int count;
     NSThread* ticketsThreadone;
     NSThread* ticketsThreadtwo;
     NSCondition* ticketsCondition;
+    NSLock *theLock;
 }
 -(void) main3;
 @end
