@@ -44,7 +44,7 @@
     for (NSTextCheckingResult* b in array)
     {
         subStr = [temp substringWithRange:b.range];//subStr 是每个和表达式匹配好的字符串。
-        NSLog(@" str 1 is %@",subStr);
+        //NSLog(@" str 1 is %@",subStr);
     }
     
     //拆分字符串中的数字,共3组
@@ -60,7 +60,7 @@
     {
         //subStr 是每个和表达式匹配好的数字字符串。
         subStr = [temp substringWithRange:b.range];
-        NSLog(@" str 1 is %@",subStr);
+        //NSLog(@" str 1 is %@",subStr);
     }
 
     //2.firstMaches
@@ -79,7 +79,7 @@
         {
             NSRange resultRange = [firstMatch rangeAtIndex:0];
             NSString *result=[urlString substringWithRange:resultRange];//从urlString当中截取数据
-            NSLog(@"->%@<-",result);
+            //NSLog(@"->%@<-",result);
         }
         //替换
         NSString *result=[regex stringByReplacingMatchesInString:urlString options:0 range:NSMakeRange(0, [urlString length]) withTemplate:@"aaa"];
@@ -93,7 +93,7 @@
     NSTextCheckingResult *firstMatch = [regex firstMatchInString:temp options:0 range:NSMakeRange(0, [temp length])];
     if (firstMatch)
     {
-        NSLog(@"===%@", [temp substringWithRange:firstMatch.range]);
+        //NSLog(@"===%@", [temp substringWithRange:firstMatch.range]);
     }
     
     //3.验证.与谓词一起用
@@ -104,10 +104,33 @@
     chk=[pre evaluateWithObject:temp];
     
 
+    //4.NSDataDetector是NSRegularExpression的子类，主要用于检测半结构化的数据：日期，地址，电话号码等
     
+    //根据检测的类型初始化NSDataDetector
+    NSDataDetector *detector = [NSDataDetector dataDetectorWithTypes:
+                                NSTextCheckingTypePhoneNumber | NSTextCheckingTypeLink|NSTextCheckingTypeDate
+                                                               error:&error];
+    //需要检测的字符串
+    NSString *testStr = @"有一个网址：wwww.JohnnyLiu.com有一个电话：15310547654 还有一个地址：大屯路 2015-12-04";
     
-    
-    
+    [detector enumerateMatchesInString:testStr
+                               options:kNilOptions
+                                 range:NSMakeRange(0, testStr.length)
+                                usingBlock:^(NSTextCheckingResult * _Nullable result, NSMatchingFlags flags, BOOL * _Nonnull stop)
+                                {
+                                    NSLog(@"result.range = %@",NSStringFromRange(result.range));
+                                    if (result.URL) {
+                                        NSLog(@"url = %@",result.URL);
+                                    }
+                                    if (result.phoneNumber) {
+                                        NSLog(@"phone = %@",result.phoneNumber);
+                                    }
+                                    if(result.date)
+                                    {
+                                        NSLog(@"phone = %@",result.date);
+                                    }
+                                }
+                            ];
 
 }
 
