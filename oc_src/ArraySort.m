@@ -22,7 +22,7 @@
     [array addObject:p3];
     NSArray *result=nil;
     
-    //创建谓词 http://blog.sina.com.cn/s/blog_859ab336010158dz.html
+    //创建谓词  http://blog.sina.com.cn/s/blog_859ab336010158dz.html
     //1.
     NSPredicate *pre_name = [NSPredicate predicateWithFormat:
                               @" name == %@", @"zhangsan"];

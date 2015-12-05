@@ -6,7 +6,7 @@
 //  Copyright © 2015年 lanou3g. All rights reserved.
 //
 
-#import "Person.h"
+#import "Person.h" 
 
 @implementation Person
 -(instancetype) initWithName:(NSString *) name
