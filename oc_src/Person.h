@@ -13,6 +13,9 @@
     NSString *_name;
     NSInteger _age;
 }
+//为array集合中的排序sortedArrayUsingSelector，做方法。以便@select调用。必须在Person中实现
+-(NSComparisonResult) comaprePersonAge:(Person *) person;
+
 -(instancetype) initWithName:(NSString *) name
                          age:(NSInteger) age;
 -(void) sayHi;

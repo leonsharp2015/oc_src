@@ -7,7 +7,7 @@
 // 
 
 #import <Foundation/Foundation.h>
-
+#import "Person.h"
 @interface ArraySort : NSObject
 -(void) test;
 @end
