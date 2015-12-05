@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C208C5531C1088B4006560D5 /* ArraySort.m in Sources */ = {isa = PBXBuildFile; fileRef = C208C5521C1088B4006560D5 /* ArraySort.m */; settings = {ASSET_TAGS = (); }; };
+		C208C5561C109184006560D5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C208C5541C109184006560D5 /* Person.m */; settings = {ASSET_TAGS = (); }; };
 		C2784E331C0E72A9001632B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2784E321C0E72A9001632B6 /* main.m */; };
+		C2784E3B1C0E73B2001632B6 /* NSThread_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = C2784E3A1C0E73B2001632B6 /* NSThread_Test.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C208C5511C1088B4006560D5 /* ArraySort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArraySort.h; sourceTree = "<group>"; };
+		C208C5521C1088B4006560D5 /* ArraySort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArraySort.m; sourceTree = "<group>"; };
+		C208C5541C109184006560D5 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		C208C5551C109184006560D5 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		C2784E2F1C0E72A9001632B6 /* oc_src */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = oc_src; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2784E321C0E72A9001632B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C2784E391C0E73B2001632B6 /* NSThread_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThread_Test.h; sourceTree = "<group>"; };
+		C2784E3A1C0E73B2001632B6 /* NSThread_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThread_Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +66,13 @@
 		C2784E311C0E72A9001632B6 /* oc_src */ = {
 			isa = PBXGroup;
 			children = (
+				C208C5541C109184006560D5 /* Person.m */,
+				C208C5551C109184006560D5 /* Person.h */,
 				C2784E321C0E72A9001632B6 /* main.m */,
+				C208C5511C1088B4006560D5 /* ArraySort.h */,
+				C208C5521C1088B4006560D5 /* ArraySort.m */,
+				C2784E391C0E73B2001632B6 /* NSThread_Test.h */,
+				C2784E3A1C0E73B2001632B6 /* NSThread_Test.m */,
 			);
 			path = oc_src;
 			sourceTree = "<group>";
@@ -118,6 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C208C5531C1088B4006560D5 /* ArraySort.m in Sources */,
+				C2784E3B1C0E73B2001632B6 /* NSThread_Test.m in Sources */,
+				C208C5561C109184006560D5 /* Person.m in Sources */,
 				C2784E331C0E72A9001632B6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +223,7 @@
 		C2784E371C0E72A9001632B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +231,7 @@
 		C2784E381C0E72A9001632B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -235,6 +255,7 @@
 				C2784E381C0E72A9001632B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
