@@ -11,6 +11,7 @@
 		C208C5561C109184006560D5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C208C5541C109184006560D5 /* Person.m */; settings = {ASSET_TAGS = (); }; };
 		C2784E331C0E72A9001632B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2784E321C0E72A9001632B6 /* main.m */; };
 		C2784E3B1C0E73B2001632B6 /* NSThread_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = C2784E3A1C0E73B2001632B6 /* NSThread_Test.m */; settings = {ASSET_TAGS = (); }; };
+		C2F4B1F61C1270D300066065 /* Regex_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F4B1F51C1270D300066065 /* Regex_Test.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		C2784E321C0E72A9001632B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2784E391C0E73B2001632B6 /* NSThread_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThread_Test.h; sourceTree = "<group>"; };
 		C2784E3A1C0E73B2001632B6 /* NSThread_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThread_Test.m; sourceTree = "<group>"; };
+		C2F4B1F41C1270D300066065 /* Regex_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Regex_Test.h; sourceTree = "<group>"; };
+		C2F4B1F51C1270D300066065 /* Regex_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Regex_Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				C2784E321C0E72A9001632B6 /* main.m */,
 				C208C5511C1088B4006560D5 /* ArraySort.h */,
 				C208C5521C1088B4006560D5 /* ArraySort.m */,
+				C2F4B1F41C1270D300066065 /* Regex_Test.h */,
+				C2F4B1F51C1270D300066065 /* Regex_Test.m */,
 				C2784E391C0E73B2001632B6 /* NSThread_Test.h */,
 				C2784E3A1C0E73B2001632B6 /* NSThread_Test.m */,
 			);
@@ -134,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C208C5531C1088B4006560D5 /* ArraySort.m in Sources */,
+				C2F4B1F61C1270D300066065 /* Regex_Test.m in Sources */,
 				C2784E3B1C0E73B2001632B6 /* NSThread_Test.m in Sources */,
 				C208C5561C109184006560D5 /* Person.m in Sources */,
 				C2784E331C0E72A9001632B6 /* main.m in Sources */,
