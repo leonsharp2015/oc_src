@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface Regex_Test : NSObject
--(void) test;
+-(void) test_stringRange;
 -(void) test_regex;
 @end

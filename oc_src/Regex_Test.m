@@ -9,22 +9,17 @@
 #import "Regex_Test.h"
 
 @implementation Regex_Test
--(void) test
+-(void) test_stringRange
 {
-    
-    BOOL chk=NO;
-    NSString *temp=@"";
-    NSString *strReg=@"";
-
-    //2.string rangeOfString
+    //1.string rangeOfString
     NSString *str1 = @"can you A speak English";
     NSString *str = @"A";
-    //在str1这个字符串中搜索\n，判断有没有,range.location==NSNotFound的判断
+    
     if ([str1 rangeOfString:str].location != NSNotFound) {
         NSLog(@"这个字符串中有%@",str);
     }
-    //3.string的子字符串匹配
-    temp = @"ff10289fffr991";//10289fff返回NSNotFound
+    //2.NSRegularExpressionSearch
+    NSString *temp = @"10289";//10289fff返回NSNotFound
     NSRange range = [temp rangeOfString:@"^[0-9]+$" options:NSRegularExpressionSearch];
     if (range.location != NSNotFound)
     {
@@ -80,7 +75,7 @@
     {
         NSTextCheckingResult *firstMatch=[regex firstMatchInString:urlString options:0 range:NSMakeRange(0, [urlString length])];
         
-        if (firstMatch)
+        if (firstMatch)//如果匹配到
         {
             NSRange resultRange = [firstMatch rangeAtIndex:0];
             NSString *result=[urlString substringWithRange:resultRange];//从urlString当中截取数据
@@ -95,10 +90,10 @@
     temp = @"jj12366kkk9854";
     regex = [NSRegularExpression regularExpressionWithPattern:@"[0-9]+" options:NSRegularExpressionCaseInsensitive error:&error];
     
-    NSTextCheckingResult *result = [regex firstMatchInString:temp options:0 range:NSMakeRange(0, [temp length])];
-    if (result)
+    NSTextCheckingResult *firstMatch = [regex firstMatchInString:temp options:0 range:NSMakeRange(0, [temp length])];
+    if (firstMatch)
     {
-        NSLog(@"===%@", [temp substringWithRange:result.range]);
+        NSLog(@"===%@", [temp substringWithRange:firstMatch.range]);
     }
     
     //3.验证.与谓词一起用
