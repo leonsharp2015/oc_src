@@ -17,8 +17,6 @@ int main(int argc, const char * argv[])
     //[reg test_regex];
     ArraySort *sort=[[ArraySort alloc] init ];
     [sort test];
-    
-   
 
     
 }

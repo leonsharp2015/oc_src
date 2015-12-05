@@ -95,7 +95,8 @@
     [array addObject:p2];
     [array addObject:p3];
     //comaprePersonAge必须放在Person类中
-    [array sortedArrayUsingSelector:@selector(comaprePersonAge:)];
+    //[array sortedArrayUsingSelector:@selector(comaprePersonAge:)];
+    [array sortUsingSelector:@selector(comaprePersonAge:)];
     
     for (Person *p in array)
     {

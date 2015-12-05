@@ -13,18 +13,30 @@
 //为array集合中的排序sortedArrayUsingSelector，做方法。以便@select调用。必须在Person中实现
 -(NSComparisonResult) comaprePersonAge:(Person *) p1
 {
-    if([p1 age] >[self age])
+    //必须返回NSComparisonResult型
+    /* ok*/
+//    return
+//    [
+//            [NSNumber numberWithInteger:[self age]]
+//            compare:
+//            [NSNumber numberWithInteger:[p1 age]]
+//    ];
+    
+    //return (NSComparisonResult)([p1 age] >[self age]);
+    /* */
+    if([p1 age] <[self age])
     {
-        return NSOrderedDescending;
+        return (NSComparisonResult)NSOrderedDescending;
     }
-    else if([p1 age] <[self age])
+    else if([p1 age] >[self age])
     {
-        return NSOrderedAscending;
+        return (NSComparisonResult)NSOrderedAscending;
     }
     else
     {
-        return NSOrderedSame;
+        return (NSComparisonResult)NSOrderedSame;
     }
+    
     
 }
 
