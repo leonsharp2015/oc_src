@@ -34,6 +34,7 @@
 		C208C5551C109184006560D5 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		C26BAFC71C15D3F900578CCC /* SEL_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEL_test.h; sourceTree = "<group>"; };
 		C26BAFC81C15D3F900578CCC /* SEL_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEL_test.m; sourceTree = "<group>"; };
+		C26BAFCB1C15D83000578CCC /* 蓝鸥oc_类的扩展.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "蓝鸥oc_类的扩展.pdf"; sourceTree = "<group>"; };
 		C2784E2F1C0E72A9001632B6 /* oc_src */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = oc_src; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2784E321C0E72A9001632B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2784E391C0E73B2001632B6 /* NSThread_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThread_Test.h; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 				C26BAFC81C15D3F900578CCC /* SEL_test.m */,
 				C2784E321C0E72A9001632B6 /* main.m */,
 				C208C5511C1088B4006560D5 /* ArraySort.h */,
+				C26BAFCB1C15D83000578CCC /* 蓝鸥oc_类的扩展.pdf */,
 				C208C5521C1088B4006560D5 /* ArraySort.m */,
 				C2F4B1F41C1270D300066065 /* Regex_Test.h */,
 				C2F4B1F51C1270D300066065 /* Regex_Test.m */,
