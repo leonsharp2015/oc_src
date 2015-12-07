@@ -111,5 +111,16 @@
     //[self sort_array_1];
     [self sort_array_2];
     
+    NSMutableArray *array=[[NSMutableArray alloc] initWithObjects:@"mn",@"hj",@"a5",@"z1" ,nil];
+    
+    [array sortUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 compare:obj2 ];
+    }];
+    for (NSString *k in array) {
+        NSLog(@"%@",k);
+    }
+
+    
+    
 }
 @end
