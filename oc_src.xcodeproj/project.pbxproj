@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C208C5531C1088B4006560D5 /* ArraySort.m in Sources */ = {isa = PBXBuildFile; fileRef = C208C5521C1088B4006560D5 /* ArraySort.m */; settings = {ASSET_TAGS = (); }; };
 		C208C5561C109184006560D5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C208C5541C109184006560D5 /* Person.m */; settings = {ASSET_TAGS = (); }; };
+		C26BAFC91C15D3F900578CCC /* SEL_test.m in Sources */ = {isa = PBXBuildFile; fileRef = C26BAFC81C15D3F900578CCC /* SEL_test.m */; settings = {ASSET_TAGS = (); }; };
 		C2784E331C0E72A9001632B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2784E321C0E72A9001632B6 /* main.m */; };
 		C2784E3B1C0E73B2001632B6 /* NSThread_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = C2784E3A1C0E73B2001632B6 /* NSThread_Test.m */; settings = {ASSET_TAGS = (); }; };
 		C2F4B1F61C1270D300066065 /* Regex_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F4B1F51C1270D300066065 /* Regex_Test.m */; settings = {ASSET_TAGS = (); }; };
@@ -31,6 +32,8 @@
 		C208C5521C1088B4006560D5 /* ArraySort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArraySort.m; sourceTree = "<group>"; };
 		C208C5541C109184006560D5 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		C208C5551C109184006560D5 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		C26BAFC71C15D3F900578CCC /* SEL_test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEL_test.h; sourceTree = "<group>"; };
+		C26BAFC81C15D3F900578CCC /* SEL_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEL_test.m; sourceTree = "<group>"; };
 		C2784E2F1C0E72A9001632B6 /* oc_src */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = oc_src; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2784E321C0E72A9001632B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2784E391C0E73B2001632B6 /* NSThread_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThread_Test.h; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				C208C5541C109184006560D5 /* Person.m */,
+				C26BAFC71C15D3F900578CCC /* SEL_test.h */,
+				C26BAFC81C15D3F900578CCC /* SEL_test.m */,
 				C208C5551C109184006560D5 /* Person.h */,
 				C2784E321C0E72A9001632B6 /* main.m */,
 				C208C5511C1088B4006560D5 /* ArraySort.h */,
@@ -142,6 +147,7 @@
 				C2F4B1F61C1270D300066065 /* Regex_Test.m in Sources */,
 				C2784E3B1C0E73B2001632B6 /* NSThread_Test.m in Sources */,
 				C208C5561C109184006560D5 /* Person.m in Sources */,
+				C26BAFC91C15D3F900578CCC /* SEL_test.m in Sources */,
 				C2784E331C0E72A9001632B6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
