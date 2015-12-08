@@ -12,6 +12,8 @@
 		C26BAFC91C15D3F900578CCC /* SEL_test.m in Sources */ = {isa = PBXBuildFile; fileRef = C26BAFC81C15D3F900578CCC /* SEL_test.m */; settings = {ASSET_TAGS = (); }; };
 		C2784E331C0E72A9001632B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2784E321C0E72A9001632B6 /* main.m */; };
 		C2784E3B1C0E73B2001632B6 /* NSThread_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = C2784E3A1C0E73B2001632B6 /* NSThread_Test.m */; settings = {ASSET_TAGS = (); }; };
+		C2CB04201C165B2500248217 /* Baby.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB041F1C165B2500248217 /* Baby.m */; settings = {ASSET_TAGS = (); }; };
+		C2CB04231C165C4700248217 /* Woman.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB04221C165C4700248217 /* Woman.m */; settings = {ASSET_TAGS = (); }; };
 		C2F4B1F61C1270D300066065 /* Regex_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F4B1F51C1270D300066065 /* Regex_Test.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,11 @@
 		C2784E321C0E72A9001632B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2784E391C0E73B2001632B6 /* NSThread_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThread_Test.h; sourceTree = "<group>"; };
 		C2784E3A1C0E73B2001632B6 /* NSThread_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThread_Test.m; sourceTree = "<group>"; };
+		C2CB041D1C165ACD00248217 /* BaoMuProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaoMuProtocol.h; sourceTree = "<group>"; };
+		C2CB041E1C165B2500248217 /* Baby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baby.h; sourceTree = "<group>"; };
+		C2CB041F1C165B2500248217 /* Baby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baby.m; sourceTree = "<group>"; };
+		C2CB04211C165C4700248217 /* Woman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Woman.h; sourceTree = "<group>"; };
+		C2CB04221C165C4700248217 /* Woman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Woman.m; sourceTree = "<group>"; };
 		C2F4B1F41C1270D300066065 /* Regex_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Regex_Test.h; sourceTree = "<group>"; };
 		C2F4B1F51C1270D300066065 /* Regex_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Regex_Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,20 +80,33 @@
 		C2784E311C0E72A9001632B6 /* oc_src */ = {
 			isa = PBXGroup;
 			children = (
+				C2CB041C1C165A8E00248217 /* delegate */,
 				C208C5551C109184006560D5 /* Person.h */,
 				C208C5541C109184006560D5 /* Person.m */,
 				C26BAFC71C15D3F900578CCC /* SEL_test.h */,
 				C26BAFC81C15D3F900578CCC /* SEL_test.m */,
 				C2784E321C0E72A9001632B6 /* main.m */,
 				C208C5511C1088B4006560D5 /* ArraySort.h */,
-				C26BAFCB1C15D83000578CCC /* 蓝鸥oc_类的扩展.pdf */,
 				C208C5521C1088B4006560D5 /* ArraySort.m */,
 				C2F4B1F41C1270D300066065 /* Regex_Test.h */,
 				C2F4B1F51C1270D300066065 /* Regex_Test.m */,
 				C2784E391C0E73B2001632B6 /* NSThread_Test.h */,
 				C2784E3A1C0E73B2001632B6 /* NSThread_Test.m */,
+				C26BAFCB1C15D83000578CCC /* 蓝鸥oc_类的扩展.pdf */,
 			);
 			path = oc_src;
+			sourceTree = "<group>";
+		};
+		C2CB041C1C165A8E00248217 /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				C2CB041D1C165ACD00248217 /* BaoMuProtocol.h */,
+				C2CB04211C165C4700248217 /* Woman.h */,
+				C2CB04221C165C4700248217 /* Woman.m */,
+				C2CB041E1C165B2500248217 /* Baby.h */,
+				C2CB041F1C165B2500248217 /* Baby.m */,
+			);
+			name = delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +168,8 @@
 				C208C5531C1088B4006560D5 /* ArraySort.m in Sources */,
 				C2F4B1F61C1270D300066065 /* Regex_Test.m in Sources */,
 				C2784E3B1C0E73B2001632B6 /* NSThread_Test.m in Sources */,
+				C2CB04201C165B2500248217 /* Baby.m in Sources */,
+				C2CB04231C165C4700248217 /* Woman.m in Sources */,
 				C208C5561C109184006560D5 /* Person.m in Sources */,
 				C26BAFC91C15D3F900578CCC /* SEL_test.m in Sources */,
 				C2784E331C0E72A9001632B6 /* main.m in Sources */,
