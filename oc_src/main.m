@@ -10,6 +10,8 @@
 #import "ArraySort.h"
 #import "Regex_Test.h"
 #import "SEL_test.h"
+#import "Woman.h"
+#import "Baby.h"
 
 void foo_test_SEL()//测试SEL
 {
@@ -46,6 +48,19 @@ void foo_test_SEL()//测试SEL
     }
 
 }
+void foo_testDelegate()//代理
+{
+    /*
+    1.创建保姆协议，方法：做饭，哄孩子
+    2.创建Baby类，实例变量:_delegate,遵守协议。方法:饿hungry,哭crying
+    3.创建Woman类，遵守协议，实现方法
+    4.在main.m中创建Baby对象和Woman对象，实现代理
+    */
+    Baby *b=[[Baby alloc] init];
+    Woman *w=[[Woman alloc] init];
+    [b setDelegate:w];
+    [b crying];
+}
 int main(int argc, const char * argv[])
 {
 
@@ -53,7 +68,10 @@ int main(int argc, const char * argv[])
     //[reg test_regex];
     //ArraySort *sort=[[ArraySort alloc] init ];
     //[sort test];
-    foo_test_SEL();
+    //foo_test_SEL();
+
+    foo_testDelegate();
+
 
     
 }
