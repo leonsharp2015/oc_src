@@ -15,6 +15,7 @@
 		C2CB04201C165B2500248217 /* Baby.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB041F1C165B2500248217 /* Baby.m */; settings = {ASSET_TAGS = (); }; };
 		C2CB04231C165C4700248217 /* Woman.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB04221C165C4700248217 /* Woman.m */; settings = {ASSET_TAGS = (); }; };
 		C2F4B1F61C1270D300066065 /* Regex_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F4B1F51C1270D300066065 /* Regex_Test.m */; settings = {ASSET_TAGS = (); }; };
+		C2FFF7A01C186898007CFAAE /* Person_memory.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FFF79F1C186898007CFAAE /* Person_memory.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,8 @@
 		C2CB04221C165C4700248217 /* Woman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Woman.m; sourceTree = "<group>"; };
 		C2F4B1F41C1270D300066065 /* Regex_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Regex_Test.h; sourceTree = "<group>"; };
 		C2F4B1F51C1270D300066065 /* Regex_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Regex_Test.m; sourceTree = "<group>"; };
+		C2FFF79E1C186898007CFAAE /* Person_memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person_memory.h; sourceTree = "<group>"; };
+		C2FFF79F1C186898007CFAAE /* Person_memory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person_memory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,7 @@
 		C2784E311C0E72A9001632B6 /* oc_src */ = {
 			isa = PBXGroup;
 			children = (
+				C2FFF79D1C186840007CFAAE /* autorelease */,
 				C2CB041C1C165A8E00248217 /* delegate */,
 				C208C5551C109184006560D5 /* Person.h */,
 				C208C5541C109184006560D5 /* Person.m */,
@@ -107,6 +111,15 @@
 				C2CB041F1C165B2500248217 /* Baby.m */,
 			);
 			name = delegate;
+			sourceTree = "<group>";
+		};
+		C2FFF79D1C186840007CFAAE /* autorelease */ = {
+			isa = PBXGroup;
+			children = (
+				C2FFF79E1C186898007CFAAE /* Person_memory.h */,
+				C2FFF79F1C186898007CFAAE /* Person_memory.m */,
+			);
+			name = autorelease;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +181,7 @@
 				C208C5531C1088B4006560D5 /* ArraySort.m in Sources */,
 				C2F4B1F61C1270D300066065 /* Regex_Test.m in Sources */,
 				C2784E3B1C0E73B2001632B6 /* NSThread_Test.m in Sources */,
+				C2FFF7A01C186898007CFAAE /* Person_memory.m in Sources */,
 				C2CB04201C165B2500248217 /* Baby.m in Sources */,
 				C2CB04231C165C4700248217 /* Woman.m in Sources */,
 				C208C5561C109184006560D5 /* Person.m in Sources */,
