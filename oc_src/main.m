@@ -12,6 +12,7 @@
 #import "SEL_test.h"
 #import "Woman.h"
 #import "Baby.h"
+#import "Person_memory.h"
 
 void foo_test_SEL()//测试SEL
 {
@@ -61,6 +62,38 @@ void foo_testDelegate()//代理
     [b setDelegate:w];
     [b crying];
 }
+void foo_autorelease()
+{
+    NSInteger k=0;
+    Person_memory *p=[[Person_memory alloc] init];
+    p.name=@"zhangsan";
+    p.age=15;
+    k=p.retainCount;//1
+    Person_memory *p_copy=[p copy];// Person必须实现copyWithZone
+    k=p.retainCount;//1 深拷贝后，p.retainCount不变化
+    
+    Person_memory *p_retain=[p retain];//retain是创建一个指针，引用对象计数加1
+    k=p.retainCount;//2
+    k=p_retain.retainCount;//2
+    BOOL isequal=[p isEqual:p_copy];//no
+    isequal=[p_copy isEqual:p_retain];//no
+    isequal=[p isEqual:p_retain];//yes
+    
+    //1.操作p_copy，p,p_retain不受影响
+    k=p_copy.retainCount;//1
+    [p_copy release];//执行完毕后，p.retainCount＝0，调用dealloc
+    //release才是真正用于内存释放的，release后系统会将该块内存标记为可用（可重新分配）
+    p_copy=nil;//nil就是把一个对象的指针置为空，只是切断了指针与内存中对象的联系
+    NSLog(@"------------");
+    //2.操作p_retain
+    k=p_retain.retainCount;//2,p.retainCount=2
+    [p_retain release];//1,p.retainCount=1
+    [p_retain release];//执行完毕后，
+    //p.retainCount＝p_retain.retainCount=0，
+    //调用dealloc
+    p_retain=nil;
+
+}
 int main(int argc, const char * argv[])
 {
 
@@ -70,8 +103,8 @@ int main(int argc, const char * argv[])
     //[sort test];
     //foo_test_SEL();
 
-    foo_testDelegate();
-
+    //foo_testDelegate();
+    foo_autorelease();
 
     
 }
